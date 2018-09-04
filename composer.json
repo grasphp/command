@@ -1,0 +1,21 @@
+{
+    "name": "senki/command",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Csaba Maulis",
+            "email": "csaba.maulis@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "league/container": "*",
+        "illuminate/support": "*",
+        "symfony/console": "*"
+    }
+}
