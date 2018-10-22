@@ -21,7 +21,7 @@ $commands = require __DIR__ . '/config/commands.php';
 foreach ($commands as $commandName) {
     $app->add($container->get($commandName));
 }
-$app->setDefaultCommand('run')
+$app->setDefaultCommand('run');
 
 // Run Forest, run
 $app->run();

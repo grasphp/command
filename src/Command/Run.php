@@ -28,5 +28,6 @@ class Run extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // code...
+        $output->writeln('Hello, World!');
     }
 }
