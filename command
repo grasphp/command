@@ -1,5 +1,5 @@
 #!/usr/bin/env php
-<?php
+<?php declare(strict_types = 1);
 
 use League\Container\Container;
 use League\Container\ReflectionContainer;
@@ -7,17 +7,21 @@ use Symfony\Component\Console\Application;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$version     = require __DIR__ . '/config/version.php';
-$commands    = require __DIR__ . '/config/commands.php';
-$container   = new Container;
-$application = new Application('senki/command', 'v'.$version);
+// Init App
+$app = new Application('senki/command', 'v0.2.0');
 
+// init Dependecy Container
+$container = new Container;
 $container->delegate(
     (new ReflectionContainer)->cacheResolutions()
 );
 
+// Load Commands to App
+$commands = require __DIR__ . '/config/commands.php';
 foreach ($commands as $commandName) {
-    $application->add($container->get($commandName));
+    $app->add($container->get($commandName));
 }
+$app->setDefaultCommand('run')
 
-$application->run();
+// Run Forest, run
+$app->run();
