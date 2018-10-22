@@ -8,7 +8,7 @@ use Symfony\Component\Console\Application;
 require __DIR__ . '/vendor/autoload.php';
 
 // Init App
-$app = new Application('senki/command', 'v0.2.0');
+$app = new Application('senki/command', 'v1.1.0');
 
 // init Dependecy Container
 $container = new Container;
