@@ -1,27 +1,32 @@
-#!/usr/bin/env php
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 use League\Container\Container;
 use League\Container\ReflectionContainer;
 use Symfony\Component\Console\Application;
+use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
 
 require __DIR__ . '/vendor/autoload.php';
 
-// Init App
-$app = new Application('senki/command', 'v1.1.0');
+// Init App.
+$app = new Application('senki/command', 'v1.2.0');
 
-// init Dependecy Container
-$container = new Container;
+// Dependency Container.
+$container = new Container();
 $container->delegate(
-    (new ReflectionContainer)->cacheResolutions()
+    (new ReflectionContainer())->cacheResolutions()
 );
 
-// Load Commands to App
+// Load Commands to App.
 $commands = require __DIR__ . '/config/commands.php';
-foreach ($commands as $commandName) {
-    $app->add($container->get($commandName));
-}
-$app->setDefaultCommand('run');
+$loader = new ContainerCommandLoader($container, $commands);
 
-// Run Forest, run
+$app->setCommandLoader($loader);
+
+if (array_key_exists('run', $commands)) {
+    $app->setDefaultCommand('run');
+}
+
+// Run Forest, run.
 $app->run();
