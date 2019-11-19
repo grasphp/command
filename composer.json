@@ -1,6 +1,6 @@
 {
     "name": "senki/command",
-    "description": "A Simple Smyfony Console Command App Scaffolding Project",
+    "description": "A Simple Symfony Console Command App Scaffolding Project",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
     },
     "require": {
         "php": "^7.1.3",
-        "league/container": "^3.2",
-        "symfony/console": "^4.1"
+        "league/container": "^3.3",
+        "symfony/console": "^4.3"
     }
 }
