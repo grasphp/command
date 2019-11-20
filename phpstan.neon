@@ -1,0 +1,9 @@
+# Documentation: https://github.com/phpstan/phpstan#configuration
+
+parameters:
+  excludes_analyse:
+    - %currentWorkingDirectory%/vendor/*
+  fileExtensions:
+    - php
+  ignoreErrors:
+  level: max

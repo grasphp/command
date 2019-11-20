@@ -1,4 +1,7 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
+
 namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -11,8 +14,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 class Run extends Command
 {
     /**
-     * @method  configure
-     * @return  void
+     * Configure command
+     *
+     * @return void
      */
     protected function configure()
     {
@@ -20,14 +24,16 @@ class Run extends Command
     }
 
     /**
-     * @method  execute
-     * @param   InputInterface   $input
-     * @param   OutputInterface  $output
-     * @return  void
+     * Run command
+     *
+     * @param InputInterface  $input  Command input interface.
+     * @param OutputInterface $output Command output interface.
+     *
+     * @return integer|null
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        // code...
         $output->writeln('Hello, World!');
+        return null;
     }
 }
