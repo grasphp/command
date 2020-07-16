@@ -1,6 +1,6 @@
 {
-    "name": "senki/command",
-    "description": "A Simple Symfony Console Command App Scaffolding Project",
+    "name": "grasphp/command",
+    "description": "Sophisticated Console Command",
     "type": "project",
     "license": "MIT",
     "authors": [
