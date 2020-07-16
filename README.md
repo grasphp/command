@@ -1,9 +1,9 @@
-# senki/command
-A Simple Smyfony Console Command App Scaffolding Project
+# grasphp/command
+Sophisticated Console Command
 
 ## Usage
 
-1. create project: `composer create-project senki/command <DIR>`
+1. create project: `composer create-project grasphp/command <DIR>`
 2. `cd <DIR>`
 3. Edit default command: `src/Command/Run.php`
 4. Execute: `php command` or `./command`
