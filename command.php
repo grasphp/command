@@ -10,7 +10,7 @@ use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
 require __DIR__ . '/vendor/autoload.php';
 
 // Init App.
-$app = new Application('senki/command', 'v1.2.0');
+$app = new Application('grasphp/command', 'v1.3.0');
 
 // Dependency Container.
 $container = new Container();

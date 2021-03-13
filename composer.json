@@ -1,12 +1,12 @@
 {
-    "name": "senki/command",
-    "description": "A Simple Symfony Console Command App Scaffolding Project",
+    "name": "grasphp/command",
+    "description": "Sophisticated Console Command",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
             "name": "Csaba Maulis",
-            "email": "senki@users.noreply.github.com"
+            "email": "hello@senki.xyz"
         }
     ],
     "autoload": {
@@ -15,8 +15,8 @@
         }
     },
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.4.4",
         "league/container": "^3.3",
-        "symfony/console": "^4.3"
+        "symfony/console": "^5.0"
     }
 }
